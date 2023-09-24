@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* White and Black*/
+  --color-black: #020202;
+  --color-white: #fafafa;
+
+  /* gray */
+  --color-gray-100: #e2e2e4;
+  --color-gray-200: #c6c6cb;
+  --color-gray-300: #ababb2;
+  --color-gray-400: #909099;
+  --color-gray-500: #767682;
+  --color-gray-600: #5e5e68;
+  --color-gray-700: #46464e;
+  --color-gray-800: #303036;
+  --color-gray-900: #1b1b1f;
+
+  /* Blue */
+  --color-blue-50: #b8d6ff;
+  --color-blue-100: #a0c8ff;
+  --color-blue-200: #7fb6ff;
+  --color-blue-300: #549eff;
+  --color-blue-400: #34629f;
+  --color-blue-500: #203d63;
+  --color-blue-600: #162944;
+
+  /* Extras */
+  --color-red-50: #f26161;
+  --color-green-50: #00a650;
+  --color-yellow-50: #ffb444;
+
+  /* Font */
+  --font-default: "Montserrat", Sans-serif;
+
+  /* Transition */
+  --transition: all 0.3s ease;
+
+  /* hover */
+  --hover-opacity: 0.7;
+
+  /* Font size */
+  font-size: 62.5%;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  border-width: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+}
+
+body {
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+
+html ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+html ::-webkit-scrollbar-thumb {
+  border-radius: 38px;
+  background: var(--color-blue-300);
+}
+html ::-webkit-scrollbar-track {
+  background: var(--color-blue-400);
+}

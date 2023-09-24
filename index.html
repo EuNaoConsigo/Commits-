@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles/base.css" />
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+
+    <link rel="stylesheet" href="./assets/styles/header/header.css" />
+    <link rel="stylesheet" href="./assets/styles/footer/footer.css" />
+
+    <link rel="stylesheet" href="./assets/styles/index/index.css" />
+    <link rel="stylesheet" href="./assets/styles/index/index_media.css" />
+    <title>Tela inicial</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__top">
+        <div class="header__logo">
+          <img
+            class="logo__icon"
+            src="assets\images\header\logo.png"
+            alt="logo"
+          />
+        </div>
+
+        <div class="searchbar">
+          <label class="searchbar__label sr-only">Buscar</label>
+          <div class="searchbar__search">
+            <input
+              type="search"
+              id="search__input"
+              class="search__input"
+              placeholder="Buscar"
+              oninput="viewClearBtn()"
+            />
+
+            <button
+              id="searchbar__clear"
+              onclick="searchClear()"
+              class="searchbar__clear"
+            >
+              <i class="fa fa-xmark"></i>
+            </button>
+          </div>
+          <button class="searchbar__submit" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="header__right">
+          <div class="gem">
+            <div class="gem__simbol">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <p class="gem__value">0000</p>
+          </div>
+          <div class="user__icon">
+            <a class="icon" href="#">
+              <i class="fa-regular fa-user"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__bottom">
+        <nav class="header__nav">
+          <ul class="nav__ul">
+            <li class="nav__item">
+              <a class="nav__link activate" href="/index.html">Início</a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="/meditation/choose_meditation.html"
+                >Meditação</a
+              >
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="/music/choose_music.html">Música</a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#">Diário</a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#">Consultas</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="tracker">
+        <div class="counter">
+          <div class="counter__left">
+            <p class="counter__days">999</p>
+            <label class="counter__days__label">Total de dias</label>
+          </div>
+          <div class="counter__center__container">
+            <span class="center__ball"></span>
+            <div class="counter__center">
+              <p class="counter__sequence">99</p>
+              <label class="counter__sequence__label">Sequência de dias</label>
+            </div>
+          </div>
+          <div class="counter__right">
+            <p class="counter__record">99</p>
+            <label class="counter__record__label">Recorde</label>
+          </div>
+        </div>
+        <div class="contrib">
+          <div class="contrib__container">
+            <table class="contrib__table" cellspacing="3">
+              <thead class="table__head">
+                <tr class="head__row">
+                  <td class="head__row__cell">
+                    <span style="display: none"></span>
+                  </td>
+
+                  <td class="head__row__cell" colspan="4">
+                    <span class="cell__month">Dez</span>
+                  </td>
+
+                  <td class="head__row__cell" colspan="4">
+                    <span class="cell__month">Jan</span>
+                  </td>
+
+                  <td class="head__row__cell" colspan="4">
+                    <span class="cell__month">Fev</span>
+                  </td>
+
+                  <td class="head__row__cell" colspan="4">
+                    <span class="cell__month">Mar</span>
+                  </td>
+
+                  <td class="head__row__cell" colspan="4">
+                    <span class="cell__month">Abr</span>
+                  </td>
+
+                  <td class="head__row__cell" colspan="4">
+                    <span class="cell__month">Mai</span>
+                  </td>
+
+                  <td class="head__row__cell" colspan="4">
+                    <span class="cell__month">Jun</span>
+                  </td>
+
+                  <td class="head__row__cell" colspan="4">
+                    <span class="cell__month">Jul</span>
+                  </td>
+                </tr>
+              </thead>
+
+              <tbody class="table__body">
+                <tr class="body__row">
+                  <td class="body__day" colsapn="2">D</td>
+
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                </tr>
+
+                <tr class="body__row">
+                  <td class="body__day" colsapn="2">S</td>
+
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                </tr>
+
+                <tr class="body__row">
+                  <td class="body__day" colsapn="2">T</td>
+
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                </tr>
+
+                <tr class="body__row">
+                  <td class="body__day" colsapn="2">Q</td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                </tr>
+
+                <tr class="body__row">
+                  <td class="body__day" colsapn="2">Q</td>
+
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                </tr>
+                <tr class="body__row">
+                  <td class="body__day" colsapn="2">S</td>
+
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                </tr>
+                <tr class="body__row">
+                  <td class="body__day" colsapn="2">S</td>
+
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--1"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--4"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--2"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--3"></div>
+                  </td>
+                  <td class="contrib__cell">
+                    <div class="contrib__day contrib__day--5"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <table class="contrib__example" cellspacing="5">
+            <tr class="example__row">
+              <td class="example__label" colspan="2">Menos</td>
+              <td class="example__cell">
+                <div class="contrib__day contrib__day--1"></div>
+              </td>
+              <td class="example__cell">
+                <div class="contrib__day contrib__day--2"></div>
+              </td>
+              <td class="example__cell">
+                <div class="contrib__day contrib__day--3"></div>
+              </td>
+              <td class="example__cell">
+                <div class="contrib__day contrib__day--4"></div>
+              </td>
+              <td class="example__cell">
+                <div class="contrib__day contrib__day--5"></div>
+              </td>
+              <td class="example__label" colspan="2">Mais</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <hgroup class="hello">
+        <h1 class="hello__title">Olá, Paulo!</h1>
+        <h2 class="hello__subtitle">
+          Fique por dentro das noticias mais recentes do mundo da saúde
+        </h2>
+      </hgroup>
+
+      <section class="news__section">
+        <section class="news__left">
+          <figure class="news news__emphasis">
+            <img
+              class="news__image emphasis"
+              src="/assets/images/index/news_emphasis.png"
+            />
+
+            <figcaption class="news__title emphasis">
+              5 dicas importantes para manter a saúde mental no topo no ano novo
+            </figcaption>
+
+            <article class="news__details">
+              <span class="news__tag">dicas</span>
+              <span class="news__hour">há 4 horas</span>
+            </article>
+          </figure>
+
+          <section class="news__secundary">
+            <figure class="news news__bottom">
+              <img
+                class="news__image"
+                src="/assets/images/index/news_secundary.png"
+              />
+              <figcaption class="news__title secundary">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+              <article class="news__details secundary">
+                <span class="news__tag">dicas</span>
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+
+            <figure class="news news__bottom">
+              <img
+                class="news__image"
+                src="/assets/images/index/news_secundary.png"
+              />
+              <figcaption class="news__title secundary">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+              <article class="news__details secundary">
+                <span class="news__tag">dicas</span>
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+
+            <figure class="news news__bottom">
+              <img
+                class="news__image"
+                src="/assets/images/index/news_secundary.png"
+              />
+              <figcaption class="news__title secundary">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+              <article class="news__details secundary">
+                <span class="news__tag">dicas</span>
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+          </section>
+        </section>
+
+        <!-- News right -->
+        <section class="news__right">
+          <section class="news__right__line">
+            <figure class="news news__item">
+              <img
+                class="news__image right"
+                src="/assets/images/index/news_right.png"
+              />
+              <figcaption class="news__title right">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+              <article class="news__details right">
+                <span class="news__tag">dicas</span>
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+
+            <figure class="news news__item">
+              <img
+                class="news__image right"
+                src="/assets/images/index/news_right.png"
+              />
+              <figcaption class="news__title right">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+              <article class="news__details right">
+                <span class="news__tag">dicas</span>
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+          </section>
+          <section class="news__right__line">
+            <figure class="news news__item">
+              <img
+                class="news__image right"
+                src="/assets/images/index/news_right.png"
+              />
+              <figcaption class="news__title right">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+              <article class="news__details right">
+                <span class="news__tag">dicas</span>
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+
+            <figure class="news news__item">
+              <img
+                class="news__image right"
+                src="/assets/images/index/news_right.png"
+              />
+              <figcaption class="news__title right">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+              <article class="news__details right">
+                <span class="news__tag">dicas</span>
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+          </section>
+        </section>
+      </section>
+
+      <section class="slider">
+        <i class="fa-solid fa-chevron-left"></i>
+        <div class="slider__news-container">
+          <a href="#">
+            <figure class="slider__news">
+              <img
+                class="slider__news__img"
+                src="/assets/images/index/slider/1.jpg"
+              />
+              <figcaption class="slider__news__title">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+
+              <article class="slider__details">
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+          </a>
+          <a href="#">
+            <figure class="slider__news">
+              <img
+                class="slider__news__img"
+                src="/assets/images/index/slider/2.jpg"
+              />
+              <figcaption class="slider__news__title">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+
+              <article class="slider__details">
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+          </a>
+          <a href="#">
+            <figure class="slider__news">
+              <img
+                class="slider__news__img"
+                src="/assets/images/index/slider/3.jpg"
+              />
+
+              <figcaption class="slider__news__title">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+
+              <article class="slider__details">
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+          </a>
+          <a href="#">
+            <figure class="slider__news">
+              <img
+                class="slider__news__img"
+                src="/assets/images/index/slider/4.jpg"
+              />
+              <figcaption class="slider__news__title">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+
+              <article class="slider__details">
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+          </a>
+          <a href="#">
+            <figure class="slider__news">
+              <img
+                class="slider__news__img"
+                src="/assets/images/index/slider/5.jpg"
+              />
+              <figcaption class="slider__news__title">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+
+              <article class="slider__details">
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+          </a>
+          <a href="#">
+            <figure class="slider__news">
+              <img
+                class="slider__news__img"
+                src="/assets/images/index/slider/6.jpg"
+              />
+
+              <figcaption class="slider__news__title">
+                5 dicas importantes para manter a saúde mental no...
+              </figcaption>
+
+              <article class="slider__details">
+                <span class="news__hour">há 4 horas</span>
+              </article>
+            </figure>
+          </a>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="#" class="footer__link">Termos de uso</a>
+        <a href="#" class="footer__link">Políticas de privacidade</a>
+      </div>
+      <span class="footer__copywrite">MindCenter &copy; 2023</span>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/126086f037.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/scripts/search.js"></script>
+    <script src="/assets/scripts/slider.js"></script>
+  </body>
+</html>
